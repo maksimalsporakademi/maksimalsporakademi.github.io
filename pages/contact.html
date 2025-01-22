@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+    <style>
+      #map {
+        height: 600px;
+        width: 60%;
+      }
+    </style>
+</head>
+<body>
+  <div style="display: flex;">
+    <div id="map"></div>
+    <div style="margin-left: 10px;">
+      <h2 style="color: #fcb900;">Bizimle İletişime Geçin</h2>
+      <p style="text-decoration: underline;">Yenişehir Mh. Azerbaycan Cd.</p>
+      <p style="text-decoration: underline;">www.demoSite.com</p>
+      <p style="text-decoration: underline;">0 000 000 0000</p>
+      <p style="text-decoration: underline;">demoSite@gmail.com</p>
+      <p style="text-decoration: underline;">https://www.instagram.com/demosite/</p>
+      <p style="text-decoration: underline;">https://www.facebook.com/demosite/</p>
+    </div>
+  </div>
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <script>
+      const map = new maplibregl.Map({
+        container: 'map',
+        style: 'https://api.maptiler.com/maps/streets/style.json?key=RpcOl3Q2X3iQqImG7Cmb',//'https://demotiles.maplibre.org/style.json', // Açık kaynak stil dosyası
+        center: [32.4692797, 37.8547575], 
+        zoom: 15,
+      });
+  
+      // İşaretçi ekle
+      new maplibregl.Marker()
+        .setLngLat([32.4692797, 37.8547575])
+        .addTo(map);
+    </script>
+</body>
+</html>

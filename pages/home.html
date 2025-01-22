@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="../css/slider.css">
+</head>
+<body>
+    <div>
+        <div class="slider">
+            <div class="slides" id="slides"></div>
+            <div class="navigation">
+              <button id="prev">&#10094;</button>
+              <button id="next">&#10095;</button>
+            </div>
+            <div class="dots"></div>
+          </div>
+          <script>
+            let currentIndex = 0;   
+            async function loadSliderImages() {
+              try {
+                const response = await fetch('../assets/json/slider-images.json');
+                const images = await response.json();
+                const slider = document.getElementById('slides');
+                const dotsContainer = document.querySelector('.dots');
+      
+                images.forEach(image => {
+                  const img = document.createElement('img');
+                  img.src = `../assets/images/slider/${image}`;
+                  slider.appendChild(img);
+                });
+        
+                const imagess = document.querySelectorAll('.slides img');
+              // Create dots
+                imagess.forEach((_, index) => {
+                  const dot = document.createElement('button');
+                  dot.dataset.index = index;
+                  if (index === 0) dot.classList.add('active');
+                  dotsContainer.appendChild(dot);
+                });
+        
+                // Basit bir slider animasyonu
+                let index = 0;
+                setInterval(() => {
+                  slider.style.transform = `translateX(-${index * 100}%)`;
+                  index = (index + 1) % images.length;
+                }, 3000);
+              } catch (error) {
+                console.error('Failed to load images:', error);
+              }
+            }
+        
+            loadSliderImages();
+            const dots = document.querySelectorAll('.dots button');
+            const prev = document.getElementById('prev');
+            const next = document.getElementById('next');
+            next.addEventListener('click', showNext);
+            prev.addEventListener('click', showPrev);
+        
+            dots.forEach(dot => {
+              dot.addEventListener('click', (e) => {
+                currentIndex = parseInt(e.target.dataset.index, 10);
+                updateSlider(currentIndex);
+              });
+            });
+            function updateSlider(index) {
+              const dotss = document.querySelectorAll('.dots button');
+              slides.style.transform = `translateX(-${index * 100}%)`;
+              dotss.forEach(dot => dot.classList.remove('active'));
+              dotss[index].classList.add('active');
+            }
+        
+            function showNext() {
+              const imgs = document.querySelectorAll('.slides img');
+              currentIndex = (currentIndex + 1) % imgs.length;
+              updateSlider(currentIndex);
+            }
+        
+            function showPrev() {
+              const imgs = document.querySelectorAll('.slides img');
+              currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+              updateSlider(currentIndex);
+            }
+      
+          </script>
+    </div>
+</body>
+</html>
