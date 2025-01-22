@@ -1,0 +1,102 @@
+[
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/alfomedeiros_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/alfomedeiros.jpg",
+        "title": "Fotoğraf 1"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/anna-danilina_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/anna-danilina.jpg",
+        "title": "Fotoğraf 2"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/efrem-efre_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/efrem-efre.jpg",
+        "title": "Fotoğraf 3"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/flooriefloor_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/flooriefloor.jpg",
+        "title": "Fotoğraf 4"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/harun_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/harun.jpg",
+        "title": "Fotoğraf 5"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/james-collington_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/james-collington.jpg",
+        "title": "Fotoğraf 6"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/jaxon-castellan_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/jaxon-castellan.jpg",
+        "title": "Fotoğraf 7"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/larissafarber_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/larissafarber.jpg",
+        "title": "Fotoğraf 8"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/lassiratreyler_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/lassiratreyler.jpg",
+        "title": "Fotoğraf 9"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/micheile_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/micheile.jpg",
+        "title": "Fotoğraf 10"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/morgan-elise_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/morgan-elise.jpg",
+        "title": "Fotoğraf 11"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/muhammet-atam_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/muhammet-atam.jpg",
+        "title": "Fotoğraf 12"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/nati_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/nati.jpg",
+        "title": "Fotoğraf 13"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/othmane-ettalbi_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/othmane-ettalbi.jpg",
+        "title": "Fotoğraf 14"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/raymond-petrik_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/raymond-petrik.jpg",
+        "title": "Fotoğraf 15"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/sarah-eichbaum_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/sarah-eichbaum.jpg",
+        "title": "Fotoğraf 16"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/simonmigaj_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/simonmigaj.jpg",
+        "title": "Fotoğraf 17"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/supreme-from-queens_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/supreme-from-queens.jpg",
+        "title": "Fotoğraf 18"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/tanyakorn_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/tanyakorn.jpg",
+        "title": "Fotoğraf 19"
+    },
+    {
+        "thumbnail": "../assets/images/gallery/thumbnails/tim-diercks_thumbnail_150x150.jpg",
+        "full": "../assets/images/gallery/photos/tim-diercks.jpg",
+        "title": "Fotoğraf 20"
+    }
+]
