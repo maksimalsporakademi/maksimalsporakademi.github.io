@@ -5,24 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim</title>
     <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+    <link href="../css/contact.css" rel="stylesheet"/>
     <style>
       #map {
-        height: 600px;
-        width: 60%;
+        height: 500px;
+        width: 50%;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("YOUR_USER_ID"); // EmailJS kullanıcı ID'ni buraya ekle
+      })();
+            
+      function sendMail(event) {
+        event.preventDefault(); // Sayfanın yenilenmesini engelle
+    
+        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", "#contact-form")
+        .then(function(response) {
+            alert("Başvurunuz başarıyla gönderildi!");
+            document.getElementById("contact-form").reset();
+            }, function(error) {
+              alert("Hata oluştu! Lütfen tekrar deneyin.");
+              });
+     }
+    </script>
 </head>
 <body>
   <div style="display: flex;">
     <div id="map"></div>
-    <div style="margin-left: 10px;">
-      <h2 style="color: #fcb900;">Bizimle İletişime Geçin</h2>
+    <div style="margin-left: 50px;">
+      <h2 style="color: dodgerblue; text-align: center; margin-top: 0.1em; margin-bottom: 0.1em;">Hemen Randevu talebi</h2>
+      <h2 style="color: dodgerblue; text-align: center; margin-top: 0.1em; margin-bottom: 0.1em;">oluşturun!</h2>
+      <h3 style="text-align: center; margin-top: 0.1em; margin-bottom: 0.1em;">Sizi Arayalım</h3>
+      
+      <form id="contact-form" onsubmit="sendMail(event)">
+          <input type="text" name="name" placeholder="Ad Soyad" required><br>
+          <input type="text" name="birthdate" onfocus="this.type='date'" onblur="this.type='text'" placeholder="Öğrenci Doğum Tarihi" required><br>
+          <input type="email" name="email" placeholder="E-Posta(Opsiyonel)"><br>
+          <input type="text" name="phone" placeholder="Telefon" required><br>
+          <button type="submit">Randevu Talebi Oluştur</button>
+      </form>
+      <!--<h2 style="color: #fcb900;">Bizimle İletişime Geçin</h2>
       <p style="text-decoration: underline;">Yenişehir Mh. Azerbaycan Cd.</p>
       <p style="text-decoration: underline;">www.demoSite.com</p>
       <p style="text-decoration: underline;">0 000 000 0000</p>
       <p style="text-decoration: underline;">demoSite@gmail.com</p>
       <p style="text-decoration: underline;">https://www.instagram.com/demosite/</p>
-      <p style="text-decoration: underline;">https://www.facebook.com/demosite/</p>
+      <p style="text-decoration: underline;">https://www.facebook.com/demosite/</p>-->
     </div>
   </div>
     <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
@@ -30,13 +60,13 @@
       const map = new maplibregl.Map({
         container: 'map',
         style: 'https://api.maptiler.com/maps/streets/style.json?key=RpcOl3Q2X3iQqImG7Cmb',//'https://demotiles.maplibre.org/style.json', // Açık kaynak stil dosyası
-        center: [32.4692797, 37.8547575], 
+        center: [32.476200, 37.839217], 
         zoom: 15,
       });
   
       // İşaretçi ekle
       new maplibregl.Marker()
-        .setLngLat([32.4692797, 37.8547575])
+        .setLngLat([32.476200, 37.839217])
         .addTo(map);
     </script>
 </body>
