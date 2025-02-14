@@ -12,16 +12,15 @@
         width: 50%;
       }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
       (function(){
-        emailjs.init("YOUR_USER_ID"); // EmailJS kullanıcı ID'ni buraya ekle
+        emailjs.init("FD9un--HjhA5tugh9"); // EmailJS kullanıcı ID'ni buraya ekle
       })();
             
       function sendMail(event) {
         event.preventDefault(); // Sayfanın yenilenmesini engelle
-    
-        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", "#contact-form")
+        emailjs.sendForm("service_3ut4pma", "template_umggvbp", "#contact-form")
         .then(function(response) {
             alert("Başvurunuz başarıyla gönderildi!");
             document.getElementById("contact-form").reset();
@@ -40,10 +39,10 @@
       <h3 style="text-align: center; margin-top: 0.1em; margin-bottom: 0.1em;">Sizi Arayalım</h3>
       
       <form id="contact-form" onsubmit="sendMail(event)">
-          <input type="text" name="name" placeholder="Ad Soyad" required><br>
-          <input type="text" name="birthdate" onfocus="this.type='date'" onblur="this.type='text'" placeholder="Öğrenci Doğum Tarihi" required><br>
-          <input type="email" name="email" placeholder="E-Posta(Opsiyonel)"><br>
-          <input type="text" name="phone" placeholder="Telefon" required><br>
+          <input type="text" id="name" name="name" placeholder="Ad Soyad" required><br>
+          <input type="text" id="birthdate" name="birthdate" onfocus="this.type='date'" onblur="this.type='text'" placeholder="Öğrenci Doğum Tarihi" required><br>
+          <input type="email" id="email" name="email" placeholder="E-Posta(Opsiyonel)"><br>
+          <input type="text" id="phone" name="phone" placeholder="Telefon" required><br>
           <button type="submit">Randevu Talebi Oluştur</button>
       </form>
       <!--<h2 style="color: #fcb900;">Bizimle İletişime Geçin</h2>
